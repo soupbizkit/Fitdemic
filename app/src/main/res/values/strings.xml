@@ -3,4 +3,7 @@
     <string name="preguntas">Responde las siguientes preguntas: </string>
     <string name="botonSiguiente">Siguiente</string>
     <string name="cualEsTuPeso">Cual es tu Peso</string>
+    <string name="hombre">Hombre</string>
+    <string name="mujer">Mujer</string>
+
 </resources>
