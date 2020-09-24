@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.RadioButton;
+import android.widget.RadioGroup;
 
 public class PreguntasActivity extends AppCompatActivity {
     @Override
@@ -26,8 +27,10 @@ public class PreguntasActivity extends AppCompatActivity {
         EditText etPeso = (EditText)findViewById(R.id.etPeso);
         String pesoUsuario = etPeso.getText().toString();
         //Obteniendo Si es Hombre o Mujer (Sexo)
-        RadioButton rHombre
+        RadioGroup rgSexo = (RadioGroup) findViewById(R.id.rgSexo);
+        String sexoUsuario = rgSexo.toString();
         //aqui enviamos el intent
+        Usuario usuario = new Usuario(1,edadUsuario,pesoUsuario,sexoUsuario);
         startActivity(intent);
     }
 
