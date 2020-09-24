@@ -72,31 +72,45 @@
         app:layout_constraintTop_toBottomOf="@+id/etEdad" />
 
 
-    <RadioButton
-        android:id="@+id/rBHombre"
+    <RadioGroup
+        android:id="@+id/rgSexo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/hombre"
-        android:textSize="22dp"
+        android:layout_marginTop="250dp"
+        android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.306"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.646" />
+        app:layout_constraintTop_toTopOf="parent">
 
-    <RadioButton
-        android:id="@+id/rBMujer"
+        <RadioButton
+            android:id="@+id/rBHombre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/hombre"
+            android:textSize="22dp" />
+
+        <RadioButton
+            android:id="@+id/rBMujer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/mujer"
+            android:textSize="22dp" />
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/tVsexo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/mujer"
+        android:text="@string/genero"
         android:textSize="22dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.699"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.646" />
+        app:layout_constraintVertical_bias="0.596" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
