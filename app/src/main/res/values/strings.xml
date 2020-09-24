@@ -5,5 +5,6 @@
     <string name="cualEsTuPeso">Cual es tu Peso</string>
     <string name="hombre">Hombre</string>
     <string name="mujer">Mujer</string>
+    <string name="edad">Ingrese su edad: </string>
 
 </resources>
