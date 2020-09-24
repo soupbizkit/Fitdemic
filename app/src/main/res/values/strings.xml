@@ -6,5 +6,6 @@
     <string name="hombre">Hombre</string>
     <string name="mujer">Mujer</string>
     <string name="edad">Ingrese su edad: </string>
+    <string name="genero">Género: </string>
 
 </resources>

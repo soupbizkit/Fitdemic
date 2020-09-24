@@ -4,48 +4,57 @@ import java.util.ArrayList;
 
 public class Usuario {
 
-    private int edad;
-    private int pesoKg;
+    private int id;
+    private String edad;
+    private String peso;
     private String sexo;
-    private ArrayList<String> padecimientos;
+    //private ArrayList<String> padecimientos;
 
-    public Usuario(int edad, int pesoKg, String sexo, ArrayList<String> padecimientos){
+    public Usuario(int id, String edad, String peso, String sexo/*, ArrayList<String> padecimientos*/){
+        this.id = id;
         this.edad=edad;
-        this.pesoKg=pesoKg;
+        this.peso=peso;
         this.sexo=sexo;
-        this.padecimientos=padecimientos;
+        //this.padecimientos=padecimientos;
     }
 
-    public int getEdad() {
+    public String getEdad() {
+
         return edad;
     }
 
-    public int getPesoKg() {
-        return pesoKg;
+    public String getPeso() {
+
+        return peso;
     }
 
     public String getSexo() {
+
         return sexo;
     }
 
-    public ArrayList<String> getPadecimientos() {
-        return padecimientos;
-    }
+    /*public ArrayList<String> getPadecimientos() {
 
-    public void setEdad(int edad) {
+        return padecimientos;
+    }*/
+
+    public void setEdad(String edad) {
+
         this.edad = edad;
     }
 
-    public void setPesoKg(int pesoKg) {
-        this.pesoKg = pesoKg;
+    public void setPesoKg(String peso) {
+
+        this.peso = peso;
     }
 
     public void setSexo(String sexo) {
+
         this.sexo = sexo;
     }
 
-    public void setPadecimientos(ArrayList<String> padecimientos) {
+    /*public void setPadecimientos(ArrayList<String> padecimientos) {
         this.padecimientos = padecimientos;
-    }
+    }*/
 
 }
