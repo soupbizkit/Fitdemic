@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Fitdemic</string>
+    <string name="preguntas">Responde las siguientes preguntas: </string>
+    <string name="botonSiguiente">Siguiente</string>
 </resources>
