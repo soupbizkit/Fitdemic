@@ -17,7 +17,7 @@ public class DataBaseOpenHelper extends SQLiteOpenHelper {
         //CREACIÓN DE LA TABLA AL INICIAR LA APLICACIÓN
         sqLiteDatabase.execSQL(UtilitiesDataBase.TablaUsuarios.CREATE_TABLE_USUARIOS);
         //INSTER
-        insert(sqLiteDatabase, "42", "98", "M" );
+        insert(sqLiteDatabase, 42, 98, "M" );
 
     }
 

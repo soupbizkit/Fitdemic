@@ -16,8 +16,8 @@ public class UsuarioDAO {
 
     public long insertarUsuario(Usuario usuario){
         ContentValues registro = new ContentValues();
-        registro.put(UtilitiesDataBase.TablaUsuarios.EDAD, usuario.getEdad());
-        registro.put(UtilitiesDataBase.TablaUsuarios.PESO, usuario.getPeso());
+        registro.put(String.valueOf(UtilitiesDataBase.TablaUsuarios.EDAD), usuario.getEdad());
+        registro.put(String.valueOf(UtilitiesDataBase.TablaUsuarios.PESO), usuario.getPesoKg());
         registro.put(UtilitiesDataBase.TablaUsuarios.SEXO, usuario.getSexo());
         long id = db.insert(UtilitiesDataBase.TablaUsuarios.TABLE_NAME, UtilitiesDataBase.TablaUsuarios.ID, registro);
         db.close();
