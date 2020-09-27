@@ -23,21 +23,25 @@
 
     <EditText
         android:id="@+id/etEdad"
-        android:layout_width="99dp"
-        android:layout_height="35dp"
-        android:layout_marginTop="60dp"
-        android:layout_marginEnd="84dp"
+        android:layout_width="247dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="136dp"
+        android:layout_marginEnd="80dp"
         android:ems="10"
+        android:fontFamily="@font/futuraregular"
+        android:hint="@string/edad"
         android:inputType="number"
+        android:textSize="30dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
+
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="361dp"
         android:layout_height="35dp"
         android:layout_marginStart="44dp"
-        android:layout_marginTop="52dp"
+        android:layout_marginTop="64dp"
         android:fontFamily="@font/futuraregular"
         android:text="@string/preguntas"
         android:textSize="30dp"
@@ -45,22 +49,6 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
-        android:ems="10"
-        android:fontFamily="@font/futuraregular"
-        android:inputType="textPersonName"
-        android:text="@string/edad"
-        android:textSize="30dp"
-        app:layout_constraintBottom_toTopOf="@+id/etPeso"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.289"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <EditText
         android:id="@+id/etPeso"
@@ -91,19 +79,34 @@
 
         <RadioButton
             android:id="@+id/rBHombre"
-            android:layout_width="wrap_content"
+            android:layout_width="100dp"
             android:layout_height="wrap_content"
+            android:background="@drawable/rb_pers"
+            android:button="@android:color/transparent"
+            android:checked="true"
+            android:drawableTop="@drawable/hombre"
             android:text="@string/hombre"
             android:fontFamily="@font/futuraregular"
-            android:textSize="30dp" />
+            android:textSize="30dp"
+            android:textAlignment="center"
+            android:textColor="@drawable/txt_rb"
+            android:textStyle="bold" />
+
 
         <RadioButton
             android:id="@+id/rBMujer"
-            android:layout_width="wrap_content"
+            android:layout_width="100dp"
             android:layout_height="wrap_content"
+            android:background="@drawable/rb_pers"
+            android:button="@android:color/transparent"
+            android:drawableTop="@drawable/mujer"
             android:text="@string/mujer"
             android:fontFamily="@font/futuraregular"
-            android:textSize="30dp" />
+            android:textSize="30dp"
+            android:textAlignment="center"
+            android:textColor="@drawable/txt_rb"
+            android:textStyle="bold" />
+
 
     </RadioGroup>
 
@@ -120,6 +123,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.596" />
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
