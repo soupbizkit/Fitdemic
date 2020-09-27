@@ -4,78 +4,119 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".PreguntasActivity">
+    tools:context=".PreguntasActivity"
+    android:background="@color/colorSecondaryDark">
+
+    <TextView
+        android:id="@+id/tvTitulo1"
+        android:layout_width="210dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="40dp"
+        android:fontFamily="@font/futurabold"
+        android:text="@string/titulo1"
+        android:textAlignment="center"
+        android:textColor="@color/colorPrimary"
+        android:textSize="35sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvTitulo2"
+        android:layout_width="200dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/futurabold"
+        android:text="@string/titulo2"
+        android:textAlignment="center"
+        android:textColor="@color/colorPrimary"
+        android:textSize="35sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitulo1" />
+
+    <TextView
+        android:id="@+id/tvIntro"
+        android:layout_width="236dp"
+        android:layout_height="98dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/futuraregular"
+        android:text="@string/conociendote"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="23sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitulo2" />
+
+
+    <EditText
+        android:id="@+id/etPeso"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="28dp"
+        android:ems="10"
+
+        android:fontFamily="@font/futuraregular"
+        android:hint="@string/cualEsTuPeso"
+        android:inputType="number"
+        android:textSize="30sp"
+        android:textColorHint="@color/white"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:background="@drawable/custom_edit_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvIntro"
+        android:autofillHints="" />
+
+    <EditText
+        android:id="@+id/etEdad"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="28dp"
+        android:ems="10"
+        android:hint="@string/edad"
+        android:textColorHint="@color/white"
+        android:fontFamily="@font/futuraregular"
+        android:textSize="30sp"
+        android:inputType="number"
+        android:background="@drawable/custom_edit_text"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etPeso"
+        android:autofillHints="" />
 
     <Button
         android:id="@+id/bSiguiente"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="68dp"
+        android:background="@drawable/custom_button"
         android:fontFamily="@font/futuraregular"
         android:onClick="onCreateUser"
         android:text="@string/botonSiguiente"
-        android:textSize="30dp"
+        android:textSize="25sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/rgSexo" />
-
-
-    <EditText
-        android:id="@+id/etEdad"
-        android:layout_width="247dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="136dp"
-        android:layout_marginEnd="80dp"
-        android:ems="10"
-        android:fontFamily="@font/futuraregular"
-        android:hint="@string/edad"
-        android:inputType="number"
-        android:textSize="30dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
-
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="361dp"
-        android:layout_height="35dp"
-        android:layout_marginStart="44dp"
-        android:layout_marginTop="64dp"
-        android:fontFamily="@font/futuraregular"
-        android:text="@string/preguntas"
-        android:textSize="30dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <EditText
-        android:id="@+id/etPeso"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
-        android:ems="10"
-        android:fontFamily="@font/futuraregular"
-        android:hint="@string/cualEsTuPeso"
-        android:inputType="number"
-        android:textSize="30dp"
-        app:layout_constraintBottom_toTopOf="@+id/tVsexo"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etEdad" />
-
+        app:layout_constraintTop_toBottomOf="@+id/rgSexo"
+        app:layout_constraintVertical_bias="0.152" />
 
     <RadioGroup
         android:id="@+id/rgSexo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="250dp"
+        android:layout_marginTop="30dp"
         android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@+id/etEdad">
 
         <RadioButton
             android:id="@+id/rBHombre"
@@ -83,15 +124,15 @@
             android:layout_height="wrap_content"
             android:background="@drawable/rb_pers"
             android:button="@android:color/transparent"
-            android:checked="true"
             android:drawableTop="@drawable/hombre"
-            android:text="@string/hombre"
             android:fontFamily="@font/futuraregular"
-            android:textSize="30dp"
+            android:text="@string/hombre"
             android:textAlignment="center"
-            android:textColor="@drawable/txt_rb"
-            android:textStyle="bold" />
-
+            android:textColor="@color/colorPrimary"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="235dp"
+            tools:layout_editor_absoluteY="483dp" />
 
         <RadioButton
             android:id="@+id/rBMujer"
@@ -100,30 +141,14 @@
             android:background="@drawable/rb_pers"
             android:button="@android:color/transparent"
             android:drawableTop="@drawable/mujer"
-            android:text="@string/mujer"
             android:fontFamily="@font/futuraregular"
-            android:textSize="30dp"
+            android:text="@string/mujer"
             android:textAlignment="center"
-            android:textColor="@drawable/txt_rb"
-            android:textStyle="bold" />
-
-
+            android:textColor="@color/colorPrimary"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="86dp"
+            tools:layout_editor_absoluteY="483dp" />
     </RadioGroup>
-
-    <TextView
-        android:id="@+id/tVsexo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/genero"
-        android:fontFamily="@font/futuraregular"
-        android:textSize="30dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.596" />
-
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
