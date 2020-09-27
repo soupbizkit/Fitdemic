@@ -15,7 +15,8 @@
         android:text="@string/botonSiguiente"
         android:textSize="22dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        android:onClick="onCreateUser"/>
 
 
     <EditText
@@ -27,49 +28,77 @@
         android:ems="10"
         android:inputType="number"
         android:hint="@string/edad"
-        android:textSize="22dp"
+        android:textSize="25dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <EditText
         android:id="@+id/etPeso"
+        android:fontFamily="sans-serif-condensed-medium"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="48dp"
         android:ems="10"
+        android:hint="@string/cualEsTuPeso"
         android:inputType="number"
-        android:text="@string/cualEsTuPeso"
-        android:textSize="22dp"
+        android:textSize="25dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etEdad" />
 
-    <RadioButton
-        android:id="@+id/rBHombre"
+
+    <RadioGroup
+        android:id="@+id/rgSexo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/hombre"
+        android:layout_marginTop="250dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RadioButton
+            android:id="@+id/rBHombre"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rb_pers"
+            android:button="@android:color/transparent"
+            android:checked="true"
+            android:drawableTop="@drawable/hombre"
+            android:text="@string/hombre"
+            android:textAlignment="center"
+            android:textColor="@drawable/txt_rb"
+            android:textSize="22dp"
+            android:textStyle="bold" />
+
+        <RadioButton
+            android:id="@+id/rBMujer"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rb_pers"
+            android:button="@android:color/transparent"
+            android:drawableTop="@drawable/mujer"
+            android:text="@string/mujer"
+            android:textAlignment="center"
+            android:textColor="@drawable/txt_rb"
+            android:textSize="22dp"
+            android:textStyle="bold" />
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/tVsexo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/genero"
         android:textSize="22dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.306"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.646" />
-
-
-    <RadioButton
-        android:id="@+id/rBMujer"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/mujer"
-        android:textSize="22dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.699"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.646" />
+        app:layout_constraintVertical_bias="0.596" />
 
     <TextView
         android:id="@+id/textView"
