@@ -32,7 +32,10 @@ public class PreguntasActivity extends AppCompatActivity {
         //aqui enviamos el intent
         Usuario usuario = new Usuario(1,edadUsuario,pesoUsuario,sexoUsuario);
         startActivity(intent);
+
+
     }
+
 
     //función del botón, recaudar datos  del activity, conectar a base, guardar datos y cerrar conección a base
 
