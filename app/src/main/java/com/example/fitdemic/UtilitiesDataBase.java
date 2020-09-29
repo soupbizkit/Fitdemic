@@ -1,5 +1,7 @@
 package com.example.fitdemic;
 
+import java.util.ArrayList;
+
 public final class UtilitiesDataBase {
     static final String DATABASE_NAME = "usuarios";
     static final int VERSION = 1;
@@ -10,6 +12,7 @@ public final class UtilitiesDataBase {
         static final String EDAD = "edad";
         static final String PESO = "peso";
         static final String SEXO = "sexo";
+        //static final ArrayList<String> PADECIMIENTOS = "padecimientos";
 
         //CREACIÓN DE LA TABLA
         static final String CREATE_TABLE_USUARIOS="CREATE TABLE "+ TABLE_NAME+"("+ID+ " INTEGER PRIMARY KEY AUTOINCREMENT, "+EDAD+" INTEGER NOT NULL, "+ PESO+" INTEGER NOT NULL, "+SEXO+" TEXT);";

@@ -5,12 +5,12 @@ import java.util.ArrayList;
 public class Usuario {
 
     private int id;
-    private String edad;
-    private String peso;
+    private int edad;
+    private int peso;
     private String sexo;
     //private ArrayList<String> padecimientos;
 
-    public Usuario(int id, String edad, String peso, String sexo/*, ArrayList<String> padecimientos*/){
+    public Usuario(int id, int edad, int peso, String sexo/*, ArrayList<String> padecimientos*/){
         this.id = id;
         this.edad=edad;
         this.peso=peso;
@@ -18,12 +18,12 @@ public class Usuario {
         //this.padecimientos=padecimientos;
     }
 
-    public String getEdad() {
+    public int getEdad() {
 
         return edad;
     }
 
-    public String getPeso() {
+    public int getPeso() {
 
         return peso;
     }
@@ -38,12 +38,12 @@ public class Usuario {
         return padecimientos;
     }*/
 
-    public void setEdad(String edad) {
+    public void setEdad(int edad) {
 
         this.edad = edad;
     }
 
-    public void setPesoKg(String peso) {
+    public void setPesoKg(int peso) {
 
         this.peso = peso;
     }

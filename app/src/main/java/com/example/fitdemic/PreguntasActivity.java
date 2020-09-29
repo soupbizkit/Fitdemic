@@ -18,19 +18,31 @@ public class PreguntasActivity extends AppCompatActivity {
 
     public void onCreateUser(View view){
         //intent
-        Intent intent = new Intent(this,PadecimientosActivity.class);
+        Intent intent = new Intent(this, PadecimientosActivity.class);
         //Aqui debemos de crear el usuario y mandarlo a la base de datos
         //obteniendo La edad del usuario
+
         EditText etEdad = (EditText)findViewById(R.id.etEdad);
-        String edadUsuario = etEdad.getText().toString();
+        int edadUsuario = Integer.parseInt(etEdad.getText().toString());
+
         //Obteniendo El Peso del Usuario
         EditText etPeso = (EditText)findViewById(R.id.etPeso);
-        String pesoUsuario = etPeso.getText().toString();
+        int pesoUsuario = Integer.parseInt(etPeso.getText().toString());
+
         //Obteniendo Si es Hombre o Mujer (Sexo)
         RadioGroup rgSexo = (RadioGroup) findViewById(R.id.rgSexo);
         String sexoUsuario = rgSexo.toString();
+
+        //FALTA ENVIAR PADECIMIENTOS
+
+        intent.putExtra("edadUsuario", edadUsuario);
+        intent.putExtra("pesoUsuario", pesoUsuario);
+        intent.putExtra("sexoUsuario", sexoUsuario);
+        //intent.putExtra("padecimientos", padecimientos);
+
+
         //aqui enviamos el intent
-        Usuario usuario = new Usuario(1,edadUsuario,pesoUsuario,sexoUsuario);
+        //Usuario usuario = new Usuario(1,edadUsuario,pesoUsuario,sexoUsuario);
         startActivity(intent);
 
 

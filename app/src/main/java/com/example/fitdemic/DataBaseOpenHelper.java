@@ -16,7 +16,6 @@ public class DataBaseOpenHelper extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase sqLiteDatabase) {
         //CREACIÓN DE LA TABLA AL INICIAR LA APLICACIÓN
         sqLiteDatabase.execSQL(UtilitiesDataBase.TablaUsuarios.CREATE_TABLE_USUARIOS);
-        //INSTER
         //insert(sqLiteDatabase, "42", "98", "M" );
     }
 
@@ -25,6 +24,7 @@ public class DataBaseOpenHelper extends SQLiteOpenHelper {
         registro.put(UtilitiesDataBase.TablaUsuarios.EDAD, edad);
         registro.put(UtilitiesDataBase.TablaUsuarios.PESO, peso);
         registro.put(UtilitiesDataBase.TablaUsuarios.SEXO, sexo);
+        //registro.put(UtilitiesDataBase.TablaUsuarios.PADECIMIENTOS, padecimientos);
 
         db.insert(UtilitiesDataBase.TablaUsuarios.TABLE_NAME, null,registro);
 

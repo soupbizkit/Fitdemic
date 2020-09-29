@@ -22,16 +22,28 @@ public class UsuarioDAO {
         registro.put(UtilitiesDataBase.TablaUsuarios.EDAD, usuario.getEdad());
         registro.put(UtilitiesDataBase.TablaUsuarios.PESO, usuario.getPeso());
         registro.put(UtilitiesDataBase.TablaUsuarios.SEXO, usuario.getSexo());
+        //registro.put(UtilitiesDataBase.TablaUsuarios.PADECIMIENTOS, usuario.getPadecimientos);
         long id = db.insert(UtilitiesDataBase.TablaUsuarios.TABLE_NAME, UtilitiesDataBase.TablaUsuarios.ID, registro);
         db.close();
         return id;
     }
 
+
+
+
+
+
+
+
+
+
+
+
     public ArrayList<Usuario> consultarUsuarios(){
         ArrayList<Usuario> usuarios = new ArrayList<Usuario>();
         Cursor cursor = db.rawQuery(UtilitiesDataBase.TablaUsuarios.CONSULTAR_ALL_TABLE, null);
         while(cursor.moveToNext()){
-            usuarios.add(new Usuario(cursor.getInt(0), cursor.getString(1), cursor.getString(2), cursor.getString(3)));
+            usuarios.add(new Usuario(cursor.getInt(0), cursor.getInt(1), cursor.getInt(2), cursor.getString(3)));
         }
         db.close();
         return usuarios;
@@ -46,7 +58,7 @@ public class UsuarioDAO {
         //nombre_tabla, campos que quiero sacar de la tabla, parámetros de comparación,
         Cursor cursor = db.query(UtilitiesDataBase.TablaUsuarios.TABLE_NAME, campos, parametros[0] + "=?", argumentos,null,null,null);
         if(cursor.moveToFirst()){
-             usuario = new Usuario(cursor.getInt(0), cursor.getString(1), cursor.getString(2), cursor.getString(3));
+             usuario = new Usuario(cursor.getInt(0), cursor.getInt(1), cursor.getInt(2), cursor.getString(3));
         }
         db.close();
         return usuario;
