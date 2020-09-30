@@ -14,17 +14,15 @@ public class PadecimientosActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_padecimientos);
 
-        Intent intent = getIntent();
     }
 
     public void newActivity(View view){
         Bundle datosUsuario = getIntent().getExtras();
-        //Intent intent = new Intent(this, FinalizarActivity.class);
-
         //recoger datos de la lista de los padecimientos
     }
 
     public void onCreateUser(View view){
+        Intent intent = new Intent(this, FinalizarActivity.class);
         Bundle datosUsuario = getIntent().getExtras();
         int edadUsuario = datosUsuario.getInt("edadUsuario");
         int pesoUsuario = datosUsuario.getInt("pesoUsuario");
@@ -33,8 +31,12 @@ public class PadecimientosActivity extends AppCompatActivity {
         Usuario usuario = new Usuario(1, edadUsuario, pesoUsuario, sexoUsuario);
 
         UsuarioDAO usuarioDao = new UsuarioDAO(getApplicationContext());
-        ;
-    Toast toast = Toast.makeText(getApplicationContext(), "Result " + String.valueOf(usuarioDao.insertarUsuario(usuario)), Toast.LENGTH_LONG);
+        long resultado = usuarioDao.insertarUsuario(usuario);
+
+        //Toast toast = Toast.makeText(getApplicationContext(), "Result " + String.valueOf(usuarioDao.insertarUsuario(usuario)), Toast.LENGTH_LONG);
+
+        intent.putExtra("peso", pesoUsuario);
+        startActivity(intent);
     }
 
 }

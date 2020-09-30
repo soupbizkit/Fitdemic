@@ -16,7 +16,7 @@ public class PreguntasActivity extends AppCompatActivity {
         setContentView(R.layout.activity_preguntas);
     }
 
-    public void onCreateUser(View view){
+    public void onClickPadecimientos(View view){
         //intent
         Intent intent = new Intent(this, PadecimientosActivity.class);
         //Aqui debemos de crear el usuario y mandarlo a la base de datos
