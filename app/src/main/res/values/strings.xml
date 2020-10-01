@@ -10,7 +10,20 @@
     <string name="mujer">Mujer</string>
     <string name="hombre">Hombre</string>
     <string name="botonSiguiente">Seguir</string>
+    #Strings usadas en el layout de Padecimientos
     <string name="padecimientos">PADECIMIENTOS</string>
-
-
+    <string name="artritisPadecimientos">Artritis</string>
+    <string name="diabetesPadecimientos">Diabetes</string>
+    <string name="sobrepesoPadecimientos">Sobrepeso</string>
+    <string name="osteoporosisPadecimientos">Osteoporosis</string>
+    <string name="lesionesPadecimientos">Lesiones</string>
+    #Strings usadas en el layout de Finalizar
+    <string name="tituloFinalizar">Tus datos están</string>
+    <string name="titulo2Finalizar">LISTOS</string>
+    <string name="pesoFinalizar">PESO:</string>
+    <string name="edadFinalizar">EDAD:</string>
+    <string name="generoFinalizar">GENERO:</string>
+    <string name="padecimientosFinalizar">PADECIMIENTOS</string>
+    <string name="botonFinalizar">FINALIZAR</string>
+    <string name="rellenar">Rellenar</string>
 </resources>

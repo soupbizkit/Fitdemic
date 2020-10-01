@@ -18,8 +18,8 @@ public class FinalizarActivity extends AppCompatActivity {
         int identificador = intent.getIntExtra("peso", 0);
         String id = Integer.toString(identificador);
         
-        TextView textview = (TextView)findViewById(R.id.tVFinalizar);
-        textview.setText(id);
+        //TextView textview = (TextView)findViewById(R.id.tVFinalizar);
+        //textview.setText(id);
 
     }
 }

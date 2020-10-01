@@ -11,14 +11,14 @@
         android:id="@+id/tvTitulo1"
         android:layout_width="210dp"
         android:layout_height="55dp"
-        android:layout_marginTop="84dp"
+        android:layout_marginTop="50dp"
         android:fontFamily="@font/futurabold"
         android:text="@string/titulo1"
         android:textAlignment="center"
         android:textColor="@color/colorPrimary"
         android:textSize="35sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.527"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -26,23 +26,25 @@
         android:id="@+id/tvTitulo2"
         android:layout_width="200dp"
         android:layout_height="64dp"
-        android:layout_marginTop="4dp"
+        android:layout_marginTop="0dp"
         android:fontFamily="@font/futurabold"
         android:text="@string/titulo2"
         android:textAlignment="center"
         android:textColor="@color/colorPrimary"
-        android:textSize="35sp"
+        android:textSize="40sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvTitulo1" />
 
     <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="300dp"
         android:layout_height="276dp"
-        android:layout_marginStart="64dp"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="44dp"
         android:background="@color/white"
         android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvTitulo2">
 
@@ -51,7 +53,7 @@
             android:id="@+id/toolbar2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#00b0ff"
+            android:background="@color/colorSecondary"
             android:minHeight="?attr/actionBarSize"
             android:theme="?attr/actionBarTheme">
 
@@ -60,72 +62,80 @@
                 android:layout_height="match_parent"
                 android:gravity="center"
                 android:text="@string/padecimientos"
-                android:textSize="25dp" />
+                android:fontFamily="@font/ralewayregular"
+                android:textColor="@color/white"
+                android:textSize="25sp" />
         </androidx.appcompat.widget.Toolbar>
 
         <CheckBox
             android:id="@+id/cbArtritis"
             android:layout_width="match_parent"
             android:layout_height="45dp"
-            android:text="Artritis"
-            android:textColor="#0162a3"
-            android:textSize="22dp"
+            android:fontFamily="@font/ralewaysemibold"
+            android:text="@string/artritisPadecimientos"
+            android:textColor="@color/blueDark"
+            android:textSize="22sp"
             android:textStyle="bold" />
 
         <CheckBox
             android:id="@+id/cbDiabetes"
             android:layout_width="match_parent"
             android:layout_height="42dp"
-            android:text="Diabetes"
-            android:textColor="#0162a3"
-            android:textSize="22dp"
+            android:text="@string/diabetesPadecimientos"
+            android:fontFamily="@font/ralewaysemibold"
+            android:textColor="@color/blueDark"
+            android:textSize="22sp"
             android:textStyle="bold" />
 
         <CheckBox
             android:id="@+id/cbSobrepeso"
             android:layout_width="match_parent"
             android:layout_height="42dp"
-            android:text="Sobrepeso"
-            android:textColor="#0162a3"
-            android:textSize="22dp"
+            android:text="@string/sobrepesoPadecimientos"
+            android:fontFamily="@font/ralewaysemibold"
+            android:textColor="@color/blueDark"
+            android:textSize="22sp"
             android:textStyle="bold" />
 
         <CheckBox
             android:id="@+id/cbOsteoporosis"
             android:layout_width="match_parent"
             android:layout_height="42dp"
-            android:text="Osteoporosis"
-            android:textColor="#0162a3"
-            android:textSize="22dp"
+            android:text="@string/osteoporosisPadecimientos"
+            android:fontFamily="@font/ralewaysemibold"
+            android:textColor="@color/blueDark"
+            android:textSize="22sp"
             android:textStyle="bold" />
 
         <CheckBox
             android:id="@+id/cbLesiones"
             android:layout_width="match_parent"
             android:layout_height="42dp"
-            android:text="Lesiones"
-            android:textColor="#0162a3"
-            android:textSize="22dp"
+            android:text="@string/lesionesPadecimientos"
+            android:fontFamily="@font/ralewaysemibold"
+            android:textColor="@color/blueDark"
+            android:textSize="22sp"
             android:textStyle="bold" />
 
     </LinearLayout>
 
     <Button
         android:id="@+id/bSiguiente"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="96dp"
+        android:layout_width="135dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="64dp"
         android:background="@drawable/custom_button"
-        android:fontFamily="@font/futuraregular"
+        android:fontFamily="@font/futuramedium"
         android:onClick="onCreateUser"
         android:text="@string/botonSiguiente"
-        android:textSize="25sp"
+        android:textColor="@color/colorPrimaryLight"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/rgSexo"
-        app:layout_constraintVertical_bias="0.152" />
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        app:layout_constraintVertical_bias="0.0" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
