@@ -8,53 +8,50 @@ public class Usuario {
     private int edad;
     private int peso;
     private String sexo;
-    //private ArrayList<String> padecimientos;
+    private String padecimientos;
 
-    public Usuario(int id, int edad, int peso, String sexo/*, ArrayList<String> padecimientos*/){
+    public Usuario(int id, int edad, int peso, String sexo, String padecimientos){
         this.id = id;
         this.edad=edad;
         this.peso=peso;
         this.sexo=sexo;
-        //this.padecimientos=padecimientos;
+        this.padecimientos=padecimientos;
+    }
+
+    public int getId(){
+        return id;
     }
 
     public int getEdad() {
-
         return edad;
     }
 
     public int getPeso() {
-
         return peso;
     }
 
     public String getSexo() {
-
         return sexo;
     }
 
-    /*public ArrayList<String> getPadecimientos() {
-
+    public String getPadecimientos() {
         return padecimientos;
-    }*/
+    }
 
     public void setEdad(int edad) {
-
         this.edad = edad;
     }
 
     public void setPesoKg(int peso) {
-
         this.peso = peso;
     }
 
     public void setSexo(String sexo) {
-
         this.sexo = sexo;
     }
 
-    /*public void setPadecimientos(ArrayList<String> padecimientos) {
+    public void setPadecimientos(String padecimientos) {
         this.padecimientos = padecimientos;
-    }*/
+    }
 
 }

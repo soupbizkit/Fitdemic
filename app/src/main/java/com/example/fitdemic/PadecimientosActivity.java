@@ -20,9 +20,8 @@ public class PadecimientosActivity extends AppCompatActivity {
 
     }
 
-    public void onCreateUser(View view){
+    public void onClickPadecimientos(View view){
         Intent intent = getIntent();
-
         Bundle datosUsuario = getIntent().getExtras();
         ArrayList<String> padecimientos = new ArrayList<String>();
 
@@ -38,6 +37,7 @@ public class PadecimientosActivity extends AppCompatActivity {
 
         String checkboxVar = "";
 
+        //revisa que padecimientos fueron seleccionados
         if(cbArtritis.isChecked()==true){
             checkboxVar = "Artritis";
             padecimientos.add(checkboxVar);
@@ -60,8 +60,6 @@ public class PadecimientosActivity extends AppCompatActivity {
         }
 
 
-        //Toast.makeText(getApplicationContext(),padecimientos, Toast.LENGTH_LONG).show();
-
         Intent intentFinalizar = new Intent(this, FinalizarActivity.class);
         intentFinalizar.putExtra("peso", pesoUsuario);
         intentFinalizar.putExtra("edad", edadUsuario);
@@ -73,7 +71,3 @@ public class PadecimientosActivity extends AppCompatActivity {
 }
 
 
-/*UsuarioDAO usuarioDao = new UsuarioDAO(getApplicationContext());
-        long resultado = usuarioDao.insertarUsuario(usuario);
-
-        //Toast toast = Toast.makeText(getApplicationContext(), "Result " + String.valueOf(usuarioDao.insertarUsuario(usuario)), Toast.LENGTH_LONG);*/

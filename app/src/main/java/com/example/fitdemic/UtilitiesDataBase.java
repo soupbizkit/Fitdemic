@@ -12,10 +12,10 @@ public final class UtilitiesDataBase {
         static final String EDAD = "edad";
         static final String PESO = "peso";
         static final String SEXO = "sexo";
-        //static final ArrayList<String> PADECIMIENTOS = "padecimientos";
+        static final String PADECIMIENTOS = "padecimientos";
 
         //CREACIÓN DE LA TABLA
-        static final String CREATE_TABLE_USUARIOS="CREATE TABLE "+ TABLE_NAME+"("+ID+ " INTEGER PRIMARY KEY AUTOINCREMENT, "+EDAD+" INTEGER NOT NULL, "+ PESO+" INTEGER NOT NULL, "+SEXO+" TEXT);";
+        static final String CREATE_TABLE_USUARIOS="CREATE TABLE "+ TABLE_NAME+"("+ID+ " INTEGER PRIMARY KEY AUTOINCREMENT, "+EDAD+" INTEGER NOT NULL, "+ PESO+" INTEGER NOT NULL, "+SEXO+" TEXT, "+ PADECIMIENTOS + " TEXT);";
         //CONSULTA EN LA TABLA
         static final String CONSULTAR_ALL_TABLE = "SELECT * FROM "+TABLE_NAME;
     }

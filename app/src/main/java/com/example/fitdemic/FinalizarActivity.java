@@ -4,9 +4,13 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import org.json.JSONException;
 
 import java.util.ArrayList;
 
@@ -18,17 +22,12 @@ public class FinalizarActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_finalizar);
-
         Intent intent = getIntent();
-
         int pesoUsuario = intent.getIntExtra("peso", 0);
         String peso = Integer.toString(pesoUsuario);
-
         int edadUsuario = intent.getIntExtra("edad", 0);
         String edad = Integer.toString(edadUsuario);
-
         String sexoUsuario = intent.getStringExtra("sexo");
-
         ArrayList<String> padecimientos = intent.getStringArrayListExtra("padecimientos");
 
 
@@ -46,4 +45,31 @@ public class FinalizarActivity extends AppCompatActivity {
         ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, padecimientos);
         lvPadecimientos.setAdapter(arrayAdapter);
     }
+
+    public void onClickCreateUser(View view) throws JSONException {
+        Intent intent = getIntent();
+        int pesoUsuario = intent.getIntExtra("peso", 0);
+        int edadUsuario = intent.getIntExtra("edad", 0);
+        String sexoUsuario = intent.getStringExtra("sexo");
+        ArrayList<String> listaPadecimientos = intent.getStringArrayListExtra("padecimientos");
+        String padecimientos = "";
+
+        for(int i=0; i<listaPadecimientos.size(); i++){
+            if(padecimientos == ""){
+                padecimientos = listaPadecimientos.get(i);
+            }else {
+                padecimientos = padecimientos + ", " + listaPadecimientos.get(i);
+            }
+        }
+
+        Usuario usuario = new Usuario(1, edadUsuario, pesoUsuario, sexoUsuario, padecimientos);
+        UsuarioDAO usuarioDao = new UsuarioDAO(getApplicationContext());
+        Toast.makeText(getApplicationContext(), "Result " + usuarioDao.insertarUsuario(usuario), Toast.LENGTH_LONG).show();
+
+    }
+
+    /*UsuarioDAO usuarioDao = new UsuarioDAO(getApplicationContext());
+        long resultado = usuarioDao.insertarUsuario(usuario);
+
+        //Toast toast = Toast.makeText(getApplicationContext(), "Result " + usuarioDao.insertarUsuario(usuario), Toast.LENGTH_LONG);*/
 }

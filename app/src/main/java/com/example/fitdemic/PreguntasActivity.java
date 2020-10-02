@@ -19,7 +19,7 @@ public class PreguntasActivity extends AppCompatActivity {
 
     }
 
-    public void onClickPadecimientos(View view){
+    public void onClickDatos(View view){
         Intent intent = new Intent(this, PadecimientosActivity.class);
 
         EditText etPeso = (EditText)findViewById(R.id.etPeso);
@@ -33,13 +33,12 @@ public class PreguntasActivity extends AppCompatActivity {
 
         String sexo = "";
 
+        //revisa cuál de los checkbox fue seleccionado
         if(rbHombre.isChecked() == true){
             sexo = "Hombre";
         }else if(rbMujer.isChecked() == true){
             sexo = "Mujer";
         }
-
-        //FALTA ENVIAR PADECIMIENTOS
 
         intent.putExtra("edadUsuario", edadUsuario);
         intent.putExtra("pesoUsuario", pesoUsuario);
@@ -47,7 +46,6 @@ public class PreguntasActivity extends AppCompatActivity {
 
         //aqui enviamos el intent
         startActivity(intent);
-
 
     }
 }

@@ -98,7 +98,7 @@
         android:layout_height="45dp"
         android:background="@drawable/custom_button"
         android:fontFamily="@font/futuramedium"
-        android:onClick="onClickPadecimientos"
+        android:onClick="onClickDatos"
         android:text="@string/botonSiguiente"
         android:textColor="@color/colorPrimaryLight"
         android:textSize="20sp"
