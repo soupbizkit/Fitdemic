@@ -73,6 +73,10 @@ public class FinalizarActivity extends AppCompatActivity {
 
     }
 
+    public  void  next(View view){
+        Intent intent = new Intent(this,MainActivity.class);
+        startActivity(intent);
+    }
     /*UsuarioDAO usuarioDao = new UsuarioDAO(getApplicationContext());
         long resultado = usuarioDao.insertarUsuario(usuario);
 
