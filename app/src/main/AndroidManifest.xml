@@ -9,9 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".FinalizarActivity"></activity>
-        <activity android:name=".PadecimientosActivity" />
-        <activity android:name=".PreguntasActivity">
+        <activity android:name=".BienvenidoActivity"></activity>
+        <activity android:name=".LaunchActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -19,6 +18,9 @@
             </intent-filter>
         </activity>
         <activity android:name=".MainActivity" />
+        <activity android:name=".PreguntasActivity" />
+        <activity android:name=".FinalizarActivity" />
+        <activity android:name=".PadecimientosActivity" />
     </application>
 
 </manifest>

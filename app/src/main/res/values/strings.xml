@@ -1,4 +1,11 @@
 <resources>
+    #Strings usadas en el layout de bienvenido
+    <string name="bienvenido">Bienvenido</string>
+    <string name="textoBienvenido1">Conociendote mejor podemos</string>
+    <string name="textoBienvenido2">recomendar ejercicios para</string>
+    <string name="textoBienvenido3">favorecer y cuidar tu salud</string>
+    <string name="nombreBienvenido">Ingresa tu nombre:</string>
+    <string name="nombreHint">Name</string>
     #Strings usadas en el layout de preguntas
     <string name="app_name">Fitdemic</string>
     <string name="titulo1">Cuéntanos</string>

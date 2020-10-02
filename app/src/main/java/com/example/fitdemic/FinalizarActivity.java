@@ -28,8 +28,12 @@ public class FinalizarActivity extends AppCompatActivity {
         int edadUsuario = intent.getIntExtra("edad", 0);
         String edad = Integer.toString(edadUsuario);
         String sexoUsuario = intent.getStringExtra("sexo");
+        String nombreUsuario = intent.getStringExtra("nombre");
         ArrayList<String> padecimientos = intent.getStringArrayListExtra("padecimientos");
 
+
+        TextView tvNombre = (TextView)findViewById(R.id.textView3);
+        tvNombre.setText(nombreUsuario);
 
         TextView tvPeso = (TextView)findViewById(R.id.tvPesoDatos);
         tvPeso.setText(peso);
@@ -51,6 +55,7 @@ public class FinalizarActivity extends AppCompatActivity {
         int pesoUsuario = intent.getIntExtra("peso", 0);
         int edadUsuario = intent.getIntExtra("edad", 0);
         String sexoUsuario = intent.getStringExtra("sexo");
+        String nombreUsuario = intent.getStringExtra("nombre");
         ArrayList<String> listaPadecimientos = intent.getStringArrayListExtra("padecimientos");
         String padecimientos = "";
 

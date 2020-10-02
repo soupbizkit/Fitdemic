@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.CheckBox;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.lang.reflect.Array;
@@ -17,6 +18,12 @@ public class PadecimientosActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_padecimientos);
+
+        Intent intent = getIntent();
+        String nombre=intent.getStringExtra("nombreUsuario");
+
+        TextView etNombrePadecimientos = (TextView) findViewById(R.id.tvNombrePadecimientos);
+        etNombrePadecimientos.setText(nombre);
 
     }
 
@@ -34,27 +41,28 @@ public class PadecimientosActivity extends AppCompatActivity {
         int edadUsuario = datosUsuario.getInt("edadUsuario");
         int pesoUsuario = datosUsuario.getInt("pesoUsuario");
         String sexoUsuario = datosUsuario.getString("sexoUsuario");
+        String nombreUsuario = datosUsuario.getString("nombreUsuario");
 
         String checkboxVar = "";
 
         //revisa que padecimientos fueron seleccionados
-        if(cbArtritis.isChecked()==true){
+        if(cbArtritis.isChecked()){
             checkboxVar = "Artritis";
             padecimientos.add(checkboxVar);
         }
-        if(cbDiabetes.isChecked()==true){
+        if(cbDiabetes.isChecked()){
             checkboxVar = "Diabetes";
             padecimientos.add(checkboxVar);
         }
-        if(cbSobrepeso.isChecked()==true){
+        if(cbSobrepeso.isChecked()){
             checkboxVar = "Sobre Peso";
             padecimientos.add(checkboxVar);
         }
-        if(cbOsteoporosis.isChecked()==true){
+        if(cbOsteoporosis.isChecked()){
             checkboxVar = "Osteoporosis";
             padecimientos.add(checkboxVar);
         }
-        if(cbLesiones.isChecked()==true){
+        if(cbLesiones.isChecked()){
             checkboxVar = "Lesiones";
             padecimientos.add(checkboxVar);
         }
@@ -64,6 +72,7 @@ public class PadecimientosActivity extends AppCompatActivity {
         intentFinalizar.putExtra("peso", pesoUsuario);
         intentFinalizar.putExtra("edad", edadUsuario);
         intentFinalizar.putExtra("sexo", sexoUsuario);
+        intentFinalizar.putExtra("nombre",nombreUsuario);
         intentFinalizar.putStringArrayListExtra("padecimientos", padecimientos);
         startActivity(intentFinalizar);
     }
