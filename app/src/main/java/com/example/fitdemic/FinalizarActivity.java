@@ -52,10 +52,10 @@ public class FinalizarActivity extends AppCompatActivity {
 
     public void onClickCreateUser(View view) throws JSONException {
         Intent intent = getIntent();
+        String nombreUsuario = intent.getStringExtra("nombre");
         int pesoUsuario = intent.getIntExtra("peso", 0);
         int edadUsuario = intent.getIntExtra("edad", 0);
         String sexoUsuario = intent.getStringExtra("sexo");
-        String nombreUsuario = intent.getStringExtra("nombre");
         ArrayList<String> listaPadecimientos = intent.getStringArrayListExtra("padecimientos");
         String padecimientos = "";
 
@@ -67,9 +67,9 @@ public class FinalizarActivity extends AppCompatActivity {
             }
         }
 
-        Usuario usuario = new Usuario(1, edadUsuario, pesoUsuario, sexoUsuario, padecimientos);
+        Usuario usuario = new Usuario(1, nombreUsuario, edadUsuario, pesoUsuario, sexoUsuario, padecimientos);
         UsuarioDAO usuarioDao = new UsuarioDAO(getApplicationContext());
-        Toast.makeText(getApplicationContext(), "Result " + usuarioDao.insertarUsuario(usuario), Toast.LENGTH_LONG).show();
+        Toast.makeText(getApplicationContext(), "Result " + usuario.getNombre(), Toast.LENGTH_LONG).show();
 
     }
 

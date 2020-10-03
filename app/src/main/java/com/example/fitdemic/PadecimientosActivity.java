@@ -69,10 +69,10 @@ public class PadecimientosActivity extends AppCompatActivity {
 
 
         Intent intentFinalizar = new Intent(this, FinalizarActivity.class);
+        intentFinalizar.putExtra("nombre",nombreUsuario);
         intentFinalizar.putExtra("peso", pesoUsuario);
         intentFinalizar.putExtra("edad", edadUsuario);
         intentFinalizar.putExtra("sexo", sexoUsuario);
-        intentFinalizar.putExtra("nombre",nombreUsuario);
         intentFinalizar.putStringArrayListExtra("padecimientos", padecimientos);
         startActivity(intentFinalizar);
     }

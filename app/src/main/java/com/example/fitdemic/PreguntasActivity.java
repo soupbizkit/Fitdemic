@@ -18,7 +18,7 @@ public class PreguntasActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_preguntas);
         Intent intent = getIntent();
-        String nombre=intent.getStringExtra("nombreUsuario");
+        String nombre =intent.getStringExtra("nombreUsuario");
 
         TextView tvNombrePreguntas = (TextView) findViewById(R.id.etNombrePreguntas);
         tvNombrePreguntas.setText(nombre);

@@ -23,7 +23,7 @@ public class UsuarioDAO {
 
     public String insertarUsuario(Usuario usuario) {
 
-        boolean resultado = dataBaseOpenHelper.insert(db, usuario.getEdad(), usuario.getPeso(), usuario.getSexo(), usuario.getPadecimientos());
+        boolean resultado = dataBaseOpenHelper.insert(db, usuario.getNombre(), usuario.getEdad(), usuario.getPeso(), usuario.getSexo(), usuario.getPadecimientos());
 
         String respuesta = "";
 

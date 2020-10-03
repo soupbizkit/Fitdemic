@@ -23,9 +23,10 @@ public class DataBaseOpenHelper extends SQLiteOpenHelper {
 
     }
 
-    public boolean insert(SQLiteDatabase db, int edad, int peso, String sexo, String padecimientos){
+    public boolean insert(SQLiteDatabase db, String nombre, int edad, int peso, String sexo, String padecimientos){
         db = this.getWritableDatabase();
         ContentValues registro = new ContentValues();
+        registro.put(UtilitiesDataBase.TablaUsuarios.NOMBRE, nombre);
         registro.put(UtilitiesDataBase.TablaUsuarios.EDAD, edad);
         registro.put(UtilitiesDataBase.TablaUsuarios.PESO, peso);
         registro.put(UtilitiesDataBase.TablaUsuarios.SEXO, sexo);
