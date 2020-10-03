@@ -21,22 +21,11 @@ public class UsuarioDAO {
         dataBaseOpenHelper = new DataBaseOpenHelper(context);
     }
 
-    public String insertarUsuario(Usuario usuario) {
+    public Boolean insertarUsuario(Usuario usuario) {
 
         boolean resultado = dataBaseOpenHelper.insert(db, usuario.getNombre(), usuario.getEdad(), usuario.getPeso(), usuario.getSexo(), usuario.getPadecimientos());
 
-        String respuesta = "";
-
-        if(resultado){
-            respuesta = "Agregado a la base";
-            db.close();
-            return respuesta;
-        }else{
-            respuesta = "No agregado a la base";
-            db.close();
-            return respuesta;
-        }
-
+        return resultado;
 
     }
 

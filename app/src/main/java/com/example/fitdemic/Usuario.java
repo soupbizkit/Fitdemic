@@ -1,6 +1,5 @@
 package com.example.fitdemic;
 
-import java.util.ArrayList;
 
 public class Usuario {
 
@@ -23,6 +22,7 @@ public class Usuario {
     public int getId(){
         return id;
     }
+
     public String getNombre() {
         return nombre;
     }

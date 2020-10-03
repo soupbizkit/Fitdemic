@@ -2,14 +2,12 @@ package com.example.fitdemic;
 
 import android.content.ContentValues;
 import android.content.Context;
-import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
-import android.util.Log;
+
 
 import androidx.annotation.Nullable;
 
-import java.util.ArrayList;
 
 public class DataBaseOpenHelper extends SQLiteOpenHelper {
     public DataBaseOpenHelper(@Nullable Context context) {
@@ -41,11 +39,6 @@ public class DataBaseOpenHelper extends SQLiteOpenHelper {
         }
     }
 
-    /*public Cursor getUsuario(SQLiteDatabase db, int id){
-        db = this.getWritableDatabase();
-        Cursor data = db.rawQuery(UtilitiesDataBase.TablaUsuarios.CONSULTAR_ALL_TABLE, null);
-        return data;
-    }*/
 
     @Override
     public void onUpgrade(SQLiteDatabase sqLiteDatabase, int i, int i1) {

@@ -23,12 +23,14 @@ public class FinalizarActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_finalizar);
         Intent intent = getIntent();
+
+        String nombreUsuario = intent.getStringExtra("nombre");
         int pesoUsuario = intent.getIntExtra("peso", 0);
         String peso = Integer.toString(pesoUsuario);
         int edadUsuario = intent.getIntExtra("edad", 0);
         String edad = Integer.toString(edadUsuario);
         String sexoUsuario = intent.getStringExtra("sexo");
-        String nombreUsuario = intent.getStringExtra("nombre");
+
         ArrayList<String> padecimientos = intent.getStringArrayListExtra("padecimientos");
 
 
@@ -50,13 +52,14 @@ public class FinalizarActivity extends AppCompatActivity {
         lvPadecimientos.setAdapter(arrayAdapter);
     }
 
-    public void onClickCreateUser(View view) throws JSONException {
-        Intent intent = getIntent();
-        String nombreUsuario = intent.getStringExtra("nombre");
-        int pesoUsuario = intent.getIntExtra("peso", 0);
-        int edadUsuario = intent.getIntExtra("edad", 0);
-        String sexoUsuario = intent.getStringExtra("sexo");
-        ArrayList<String> listaPadecimientos = intent.getStringArrayListExtra("padecimientos");
+    public void onClickCreateUser(View view){
+        Intent intentDatos = getIntent();
+        Intent intentMain = new Intent(this,MainActivity.class);
+        String nombreUsuario = intentDatos.getStringExtra("nombre");
+        int pesoUsuario = intentDatos.getIntExtra("peso", 0);
+        int edadUsuario = intentDatos.getIntExtra("edad", 0);
+        String sexoUsuario = intentDatos.getStringExtra("sexo");
+        ArrayList<String> listaPadecimientos = intentDatos.getStringArrayListExtra("padecimientos");
         String padecimientos = "";
 
         for(int i=0; i<listaPadecimientos.size(); i++){
@@ -66,19 +69,17 @@ public class FinalizarActivity extends AppCompatActivity {
                 padecimientos = padecimientos + ", " + listaPadecimientos.get(i);
             }
         }
-
         Usuario usuario = new Usuario(1, nombreUsuario, edadUsuario, pesoUsuario, sexoUsuario, padecimientos);
         UsuarioDAO usuarioDao = new UsuarioDAO(getApplicationContext());
-        Toast.makeText(getApplicationContext(), "Result " + usuario.getNombre(), Toast.LENGTH_LONG).show();
+
+        if(usuarioDao.insertarUsuario(usuario)){
+            Toast.makeText(getApplicationContext(), "Usuario agregado", Toast.LENGTH_LONG).show();
+        } else{
+            Toast.makeText(getApplicationContext(), "Usuario no agregado", Toast.LENGTH_LONG).show();
+        }
+
+        startActivity(intentMain);
 
     }
 
-    public  void  next(View view){
-        Intent intent = new Intent(this,MainActivity.class);
-        startActivity(intent);
-    }
-    /*UsuarioDAO usuarioDao = new UsuarioDAO(getApplicationContext());
-        long resultado = usuarioDao.insertarUsuario(usuario);
-
-        //Toast toast = Toast.makeText(getApplicationContext(), "Result " + usuarioDao.insertarUsuario(usuario), Toast.LENGTH_LONG);*/
 }
