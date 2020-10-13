@@ -54,7 +54,6 @@ public class FinalizarActivity extends AppCompatActivity {
 
     public void onClickCreateUser(View view){
         Intent intentDatos = getIntent();
-        Intent intentMain = new Intent(this,MainActivity.class);
         String nombreUsuario = intentDatos.getStringExtra("nombre");
         int pesoUsuario = intentDatos.getIntExtra("peso", 0);
         int edadUsuario = intentDatos.getIntExtra("edad", 0);
@@ -78,6 +77,8 @@ public class FinalizarActivity extends AppCompatActivity {
             Toast.makeText(getApplicationContext(), "Usuario no agregado", Toast.LENGTH_LONG).show();
         }
 
+        Intent intentMain = new Intent(this, MainActivity.class);
+        intentMain.putExtra("nombreUsuario", nombreUsuario);
         startActivity(intentMain);
 
     }
