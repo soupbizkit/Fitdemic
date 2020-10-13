@@ -34,13 +34,13 @@
                     android:layout_height="130dp"
                     android:layout_marginTop="15dp"
                     android:contentDescription="@string/ibRutinaDiaria"
+                    android:onClick="onClickRutinaDiaria"
                     android:padding="1dp"
                     android:scaleType="fitXY"
                     android:src="@drawable/rutinadiariar"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    android:onClick="onClickRutinaDiaria"/>
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <ImageButton
                     android:id="@+id/ibEstiramientos"
@@ -48,13 +48,13 @@
                     android:layout_height="130dp"
                     android:layout_marginTop="15dp"
                     android:contentDescription="@string/ibEstiramientos"
+                    android:onClick="onClickEstiramiento"
                     android:padding="1dp"
                     android:scaleType="fitXY"
                     android:src="@drawable/estiramientosr"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/ibRutinaDiaria"
-                    android:onClick="onClickEstiramiento"/>
+                    app:layout_constraintTop_toBottomOf="@+id/ibRutinaDiaria" />
 
                 <ImageButton
                     android:id="@+id/ibBajoImpacto"
@@ -62,13 +62,13 @@
                     android:layout_height="130dp"
                     android:layout_marginTop="15dp"
                     android:contentDescription="@string/ibBajoImpacto"
+                    android:onClick="onClickBajoImpacto"
                     android:padding="1dp"
                     android:scaleType="fitXY"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/ibEstiramientos"
-                    app:srcCompat="@drawable/bajoimpactor"
-                    android:onClick="onClickBajoImpacto"/>
+                    app:srcCompat="@drawable/bajoimpactor" />
 
                 <ImageButton
                     android:id="@+id/ibAumentoMasa"
@@ -76,6 +76,7 @@
                     android:layout_height="130dp"
                     android:layout_marginTop="15dp"
                     android:contentDescription="@string/ibAumentoMasa"
+                    android:onClick="onClickTonificacion"
                     android:padding="1dp"
                     android:scaleType="fitXY"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -84,8 +85,7 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/ibBajoImpacto"
                     app:layout_constraintVertical_bias="0.0"
-                    app:srcCompat="@drawable/tonificacionr"
-                    android:onClick="onClickTonificacion"/>
+                    app:srcCompat="@drawable/tonificacionr" />
             </androidx.constraintlayout.widget.ConstraintLayout>
         </FrameLayout>
 
