@@ -40,7 +40,12 @@
     <string name="nav_header_subtitle">android.studio@android.com</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
-
+    #Strings usadas en el home (main activity)
+    <string name="ibRutinaDiaria">Rutina Diaria</string>
+    <string name="ibEstiramientos">Estiramientos</string>
+    <string name="ibBajoImpacto">Bajo Impacto</string>
+    <string name="ibAumentoMasa">Aumento masa</string>
+    #-----------------------------------------------------------
     <string name="menu_home">Home</string>
     <string name="menu_gallery">Gallery</string>
     <string name="menu_slideshow">Slideshow</string>

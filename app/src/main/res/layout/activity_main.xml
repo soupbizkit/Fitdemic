@@ -14,14 +14,79 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <include layout="@layout/toolbar"
-            android:id="@+id/my_toolbar"/>
+        <include
+            android:id="@+id/my_toolbar"
+            layout="@layout/toolbar" />
 
         <FrameLayout
+            android:id="@+id/flFrameLayout"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:id="@+id/flFrameLayout">
+            android:layout_height="match_parent">
 
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#FFFFFF">
+
+                <ImageButton
+                    android:id="@+id/ibRutinaDiaria"
+                    android:layout_width="340dp"
+                    android:layout_height="130dp"
+                    android:layout_marginTop="15dp"
+                    android:contentDescription="@string/ibRutinaDiaria"
+                    android:padding="1dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/rutinadiariar"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:onClick="onClickRutinaDiaria"/>
+
+                <ImageButton
+                    android:id="@+id/ibEstiramientos"
+                    android:layout_width="340dp"
+                    android:layout_height="130dp"
+                    android:layout_marginTop="15dp"
+                    android:contentDescription="@string/ibEstiramientos"
+                    android:padding="1dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/estiramientosr"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/ibRutinaDiaria"
+                    android:onClick="onClickEstiramiento"/>
+
+                <ImageButton
+                    android:id="@+id/ibBajoImpacto"
+                    android:layout_width="340dp"
+                    android:layout_height="130dp"
+                    android:layout_marginTop="15dp"
+                    android:contentDescription="@string/ibBajoImpacto"
+                    android:padding="1dp"
+                    android:scaleType="fitXY"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/ibEstiramientos"
+                    app:srcCompat="@drawable/bajoimpactor"
+                    android:onClick="onClickBajoImpacto"/>
+
+                <ImageButton
+                    android:id="@+id/ibAumentoMasa"
+                    android:layout_width="340dp"
+                    android:layout_height="130dp"
+                    android:layout_marginTop="15dp"
+                    android:contentDescription="@string/ibAumentoMasa"
+                    android:padding="1dp"
+                    android:scaleType="fitXY"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.507"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/ibBajoImpacto"
+                    app:layout_constraintVertical_bias="0.0"
+                    app:srcCompat="@drawable/tonificacionr"
+                    android:onClick="onClickTonificacion"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
         </FrameLayout>
 
     </LinearLayout>

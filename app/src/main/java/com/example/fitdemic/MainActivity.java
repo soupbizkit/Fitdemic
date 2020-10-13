@@ -12,6 +12,7 @@ import androidx.navigation.Navigation;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
 
 
 import com.google.android.material.navigation.NavigationView;
@@ -62,4 +63,30 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         return true;
     }
+
+    public void onClickRutinaDiaria(View view){
+        String tipoRutina = "rutinaDiaria";
+        Intent intent = new Intent(this,ListaDeEjercicios.class);
+        intent.putExtra("tipoRutina", tipoRutina);
+        startActivity(intent);
+    }
+    public void onClickEstiramiento(View view){
+        String tipoRutina = "estiramiento";
+        Intent intent = new Intent(this,ListaDeEjercicios.class);
+        intent.putExtra("tipoRutina", tipoRutina);
+        startActivity(intent);
+    }
+    public void onClickBajoImpacto(View view){
+        String tipoRutina = "bajoImpacto";
+        Intent intent = new Intent(this,ListaDeEjercicios.class);
+        intent.putExtra("tipoRutina", tipoRutina);
+        startActivity(intent);
+    }
+    public void onClickTonificacion(View view){
+        String tipoRutina = "tonificacion";
+        Intent intent = new Intent(this,ListaDeEjercicios.class);
+        intent.putExtra("tipoRutina", tipoRutina);
+        startActivity(intent);
+    }
+
 }
