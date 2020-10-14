@@ -40,8 +40,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         NavigationView navigationView = (NavigationView)findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
-        
-
     }
 
     @Override
@@ -51,6 +49,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         Intent intent = null;
         switch (id){
             case R.id.mProgreso:
+                //delete de base el usuario ya creado
                 intent = new Intent(this, BienvenidoActivity.class);
                 break;
         }
