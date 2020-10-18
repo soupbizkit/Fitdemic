@@ -24,16 +24,16 @@ public class Ejercicio {
 
     public static final Ejercicio[] ejerciciosEstiramiento = {
             new Ejercicio(11, "Cuello", "Inclina la cabeza de un lado a otro, mantener durante 20 segundos 5 veces en cada dirección", R.drawable.cuello),
-            new Ejercicio(12, "Hombro", "Lleva un brazo hacia el lado contrario y con el brazo libre hacer presión sobre el codo, mantener durante 15 segundos, 3 veces cada brazo.", R.drawable.hombros),
-            new Ejercicio(13, "Brazo", "Pasa el brazo por detrás de la cabeza, y con la otra mano toma el codo tira de él hacia atrás, mantener 15 segundos repetir 3 veces con cada brazo.", R.drawable.biceps),
-            new Ejercicio(14, "Pierna", "Flexiona la rodilla al máximo, sujetando el pie con la mano del lado contrario. Mantener 15 segundos repetir 3 veces con cada pierna ", R.drawable.pierna),
+            new Ejercicio(12, "Hombro", "Lleva un brazo hacia el lado contrario y con el brazo libre hacer presión sobre el codo, mantener durante 15 segundos, 3 veces cada brazo.", R.drawable.hombro),
+            new Ejercicio(13, "Brazo", "Pasa el brazo por detrás de la cabeza, y con la otra mano toma el codo tira de él hacia atrás, mantener 15 segundos repetir 3 veces con cada brazo.", R.drawable.brazo),
+            new Ejercicio(14, "Pierna", "Flexiona la rodilla al máximo, sujetando el pie con la mano. Mantener 15 segundos repetir 3 veces con cada pierna ", R.drawable.pierna),
             new Ejercicio(15, "Parte superior", "Brazos estirados y cruzados sobre la cabeza y las palmas de las manos unidas, mantener 15 segundos", R.drawable.partesuperior),
     };
 
     public static final Ejercicio[] ejerciciosBajoImpacto = {
             new Ejercicio(16, "Boxeo", "Lanzar puños hacia el frente mientras se hacen pequeñas flexiones con cada puño. hacerlo durante 30 segundos.", R.drawable.boxeo),
             new Ejercicio(17, "Elevación de rodillas", "De pie, sube cada rodilla lo más alto posible, repetir durante 30 segundos", R.drawable.elevacionrodilla),
-            new Ejercicio(18, "Sentadilla con elevación de rodilla", "En el suelo boca arriba, con las piernas flexionadas realice 4 series de 10 repeticiones", R.drawable.sentadillarodilla),
+            new Ejercicio(18, "Sentadilla con elevación de rodilla", "De pie realice una sentadilla y seguido a eso eleve la rodilla y trate de llevarla al codo opuesto, 15 repeticiones", R.drawable.sentadillarodilla),
             new Ejercicio(19, "Abdominales Bicicleta", "En el suelo boca arriba, eleve las piernas y pedalee lentamente con las piernas en el aire. repetir durante 30 segundos.", R.drawable.abdominalesbicicleta),
             new Ejercicio(20, "Flexiones de pecho", "boca abajo con las manos a la altura de los hombros, empuja el suelo para elevar tu cuerpo. repite 4 sesiones de 12 repeticiones.", R.drawable.flexionesdepecho),
     };
