@@ -25,7 +25,7 @@ public class Ejercicio {
     public static final Ejercicio[] ejerciciosEstiramiento = {
             new Ejercicio(11, "Cuello", "Inclina la cabeza de un lado a otro, mantener durante 20 segundos 5 veces en cada dirección", R.drawable.cuello),
             new Ejercicio(12, "Hombro", "Lleva un brazo hacia el lado contrario y con el brazo libre hacer presión sobre el codo, mantener durante 15 segundos, 3 veces cada brazo.", R.drawable.hombros),
-            new Ejercicio(13, "Brazo", "Pasa el brazo por detrás de la cabeza, y con la otra mano toma el codo tira de él hacia atrás, mantener 15 segundos repetir 3 veces con cada brazo.", R.drawable.br),
+            new Ejercicio(13, "Brazo", "Pasa el brazo por detrás de la cabeza, y con la otra mano toma el codo tira de él hacia atrás, mantener 15 segundos repetir 3 veces con cada brazo.", R.drawable.biceps),
             new Ejercicio(14, "Pierna", "Flexiona la rodilla al máximo, sujetando el pie con la mano del lado contrario. Mantener 15 segundos repetir 3 veces con cada pierna ", R.drawable.pierna),
             new Ejercicio(15, "Parte superior", "Brazos estirados y cruzados sobre la cabeza y las palmas de las manos unidas, mantener 15 segundos", R.drawable.partesuperior),
     };
