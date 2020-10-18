@@ -17,7 +17,7 @@ public class Ejercicio {
     public static final Ejercicio[] ejerciciosTonificacionMuscular = {
             new Ejercicio(6, "Flexiones de pecho", "boca abajo con las manos a la altura de los hombros, empuja el suelo para elevar tu cuerpo. repite 4 sesiones de 12 repeticiones.", R.drawable.flexionesdepecho),
             new Ejercicio(7, "Dips de tríceps", "con ayuda de una silla y de espalda a esta, colocar las manos apoyándose en la silla y flexionar los codos para bajar y subir. 4 sesiones de 12 repeticiones.", R.drawable.dipsdetriceps),
-            new Ejercicio(8, "Zancadas alternas", "da un paso largo hacia adelante hasta que la rodilla de la pierna trasera tenga contacto con el suelo y cambia de pierna. 30 pasos.",0),
+            new Ejercicio(8, "Zancadas alternas", "da un paso largo hacia adelante hasta que la rodilla de la pierna trasera tenga contacto con el suelo y cambia de pierna. 30 pasos.",R.drawable.zancadas),
             new Ejercicio(9, "Abdominales", "En el suelo boca arriba, con las piernas flexionadas realice 4 series de 10 repeticiones", R.drawable.abdominales),
             new Ejercicio(10, "Superman", "En el suelo boca abajo, estira los brazos hacia adelante y sube y baja simultaneamente tus piernas y brazos. 20 repeticiones", R.drawable.superman),
     };
