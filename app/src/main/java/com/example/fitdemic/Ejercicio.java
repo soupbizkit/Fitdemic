@@ -69,4 +69,12 @@ public class Ejercicio {
     public void setDescripcion(String descripcion) {
         this.descripcion = descripcion;
     }
+
+    public void setImagen(int imagen) {
+        this.imagen = imagen;
+    }
+
+    public int getImagen() {
+        return imagen;
+    }
 }
