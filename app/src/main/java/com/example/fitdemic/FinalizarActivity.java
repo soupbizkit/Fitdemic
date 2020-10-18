@@ -10,11 +10,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import org.json.JSONException;
-
 import java.util.ArrayList;
-
-import static java.util.Arrays.asList;
 
 public class FinalizarActivity extends AppCompatActivity {
 
