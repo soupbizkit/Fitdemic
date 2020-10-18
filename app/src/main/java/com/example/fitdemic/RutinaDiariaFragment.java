@@ -36,6 +36,7 @@ public class RutinaDiariaFragment extends ListFragment {
         }
         ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(inflater.getContext(),android.R.layout.simple_list_item_1,dataSet);
         setListAdapter(arrayAdapter);
+        Toast.makeText(getContext(), String.valueOf(arrayAdapter.getCount()), Toast.LENGTH_LONG).show();
         return super.onCreateView(inflater,container,savedInstanceState);
     }
 

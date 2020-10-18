@@ -31,12 +31,15 @@ public class DetallesEjerciciosActivity extends AppCompatActivity {
                 break;
             case "estiramiento":
                 view.setText(Ejercicio.ejerciciosEstiramiento[index].getDescripcion());
+                imageView.setImageResource(Ejercicio.ejerciciosEstiramiento[index].getImagen());
                 break;
             case "bajoImpacto":
                 view.setText(Ejercicio.ejerciciosBajoImpacto[index].getDescripcion());
+                imageView.setImageResource(Ejercicio.ejerciciosBajoImpacto[index].getImagen());
                 break;
             case "tonificacion":
                 view.setText(Ejercicio.ejerciciosTonificacionMuscular[index].getDescripcion());
+                imageView.setImageResource(Ejercicio.ejerciciosTonificacionMuscular[index].getImagen());
                 break;
         }
 
