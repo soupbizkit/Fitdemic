@@ -25,9 +25,10 @@
         app:layout_constraintTop_toTopOf="parent">
 
     <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/ivEjercicio"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:src="@drawable/abdominales"/>
+        />
     </LinearLayout>
 
 

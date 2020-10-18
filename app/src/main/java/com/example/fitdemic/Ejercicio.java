@@ -7,9 +7,9 @@ public class Ejercicio {
     private int imagen;
 
     public static final Ejercicio[] ejerciciosPerdidaGrasa = {
-            new Ejercicio(1, "Abdominales", "En el suelo boca arriba, con las piernas flexionadas realice 4 series de 10 repeticiones", 0),
-            new Ejercicio(2, "Saltos", "Salta abriendo las piernas y levantando los brazos estirados por encima de la cabeza", 0),
-            new Ejercicio(3, "Skipping", "Durante 20 segundos hacer skipping en el sitio", 0),
+            new Ejercicio(1, "Abdominales", "En el suelo boca arriba, con las piernas flexionadas realice 4 series de 10 repeticiones", R.drawable.abdominales),
+            new Ejercicio(2, "Saltos", "Salta abriendo las piernas y levantando los brazos estirados por encima de la cabeza", R.drawable.salto),
+            new Ejercicio(3, "Skipping", "Durante 20 segundos hacer skipping en el sitio", R.drawable.abdominales),
             new Ejercicio(4, "Plancha", "sostener el cuerpo en horizontal con respecto al suelo activando fuertemente el abdomen durante 30 segundos", 0),
             new Ejercicio(5, "Sentadillas", "De pie se hace el ademán de sentarse, ejerciendo presión en las piernas y glúteos. 4 sesiones de 10 repeticiones.", 0),
     };
@@ -68,5 +68,13 @@ public class Ejercicio {
 
     public void setDescripcion(String descripcion) {
         this.descripcion = descripcion;
+    }
+
+    public void setImagen(int imagen) {
+        this.imagen = imagen;
+    }
+
+    public int getImagen() {
+        return imagen;
     }
 }

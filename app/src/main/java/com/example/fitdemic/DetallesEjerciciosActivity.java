@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 public class DetallesEjerciciosActivity extends AppCompatActivity {
@@ -21,10 +22,12 @@ public class DetallesEjerciciosActivity extends AppCompatActivity {
         index = intent.getIntExtra(INDEX_EJERCICIO, 0);
         String tipoRutina = intent.getStringExtra("tipoRutina");
         TextView view = (TextView)findViewById(R.id.tvDescripcion);
+        ImageView imageView = (ImageView)findViewById(R.id.ivEjercicio);
 
         switch (tipoRutina){
             case "rutinaDiaria":
                 view.setText(Ejercicio.ejerciciosPerdidaGrasa[index].getDescripcion());
+                imageView.setImageResource(Ejercicio.ejerciciosPerdidaGrasa[index].getImagen());
                 break;
             case "estiramiento":
                 view.setText(Ejercicio.ejerciciosEstiramiento[index].getDescripcion());
